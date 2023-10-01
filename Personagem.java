@@ -5,7 +5,7 @@ public class Personagem {
   private int energia = 10;
   private int fome = 0;
   private int sono = 0;
-
+  private int itens=0;
   //construtor: lista de parâmetros vazia
   // Personagem(){
 
@@ -30,6 +30,7 @@ public class Personagem {
     if(energia >= 2){
       System.out.println(nome + " caçando...");
       energia -= 2; // energia = energia - 2;
+      itens =itens +1;
     }
     else{
       System.out.println (nome + " sem energia para caçar...");
@@ -40,11 +41,18 @@ public class Personagem {
 
   void comer(){
     if (fome >= 1){
+      if(itens>=1){
       System.out.println(nome + " comendo...");
       // operador ternário
       energia = energia + 1 > 10 ? 10 : energia + 1;
+      itens= itens-1;
       fome--;
     }
+    else{
+      fome ++;
+      System.out.println(nome + " esta com fome e sem itens");
+      
+  }}
     else{
       System.out.println(nome + " sem fome...");
     }
@@ -61,7 +69,7 @@ public class Personagem {
     }
   }
   void morrer(){
-    if (energia<=0){
+    if (energia<=0||fome>=10){
     System.out.println(nome + " morreu");
     System.exit(0);  
     }
@@ -70,11 +78,12 @@ public class Personagem {
 
   void exibirEstado(){
     System.out.printf(
-      "%s: e: %d, f: %d, s: %d\n",
+      "%s: e: %d, f: %d, s: %d, i:\n",
       nome,
       energia,
       fome,
-      sono
+      sono,
+      itens
     );
   }
  

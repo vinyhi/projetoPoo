@@ -5,4 +5,6 @@ bosso"
 git config --local user.email "vinih_bosso@hotmail.com"
 git add .
 git commit -m "projeto Poo: morte criada"
-git remote add projeto https://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@github.com/vinyhi/projetoPoo.git
+git remote add POO https://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@github.com/vinyhi/projetoPoo.git
+git pull POO main --allow-unrelated-histories
+git push POO
