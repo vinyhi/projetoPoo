@@ -1,0 +1,5 @@
+git clone https://github.com/professorbossini/20232_fatec_ipi_poo_jogo_cacador
+git init
+git config --local user.name "vinicius 
+bosso"
+git config --local user.email "vinih_bosso@hotmail.com"

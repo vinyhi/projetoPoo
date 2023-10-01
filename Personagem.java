@@ -59,8 +59,14 @@ public class Personagem {
     else{
       System.out.println(nome + " sem sono");
     }
-
   }
+  void morrer(){
+    if (energia<=0){
+    System.out.println(nome + " morreu");
+    System.exit(0);  
+    }
+  }
+  
 
   void exibirEstado(){
     System.out.printf(
