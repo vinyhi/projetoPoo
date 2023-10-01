@@ -78,7 +78,7 @@ public class Personagem {
 
   void exibirEstado(){
     System.out.printf(
-      "%s: e: %d, f: %d, s: %d, i:\n",
+      "%s: e: %d, f: %d, s: %d, i:%d\n",
       nome,
       energia,
       fome,

@@ -20,6 +20,7 @@ public class Jogo {
         personagem.dormir();
         break;
       }
+      personagem.morrer();
       personagem.exibirEstado();
       System.out.println("--------------------");
       
